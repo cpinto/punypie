@@ -40,7 +40,8 @@ def shorten(url):
 
         Returns a PunyURL object with the shortened versions of the URL.
         Example usage:
-        >>> puny = shorten('http://developers.sapo.pt')
+        >>> import punypie
+        >>> puny = punypie.shorten('http://developers.sapo.pt')
         >>> print puny.puny
         http://漭.sl.pt
         >>> print puny.ascii
@@ -54,7 +55,8 @@ def expand(puny):
         
         Returns the original URL
         Example usage:
-        >>> print expand('http://b.ot.sl.pt')
+        >>> import punypie
+        >>> print punypie.expand('http://b.ot.sl.pt')
         http://developers.sapo.pt
     '''
     u = '?'.join((FROM_PUNY,urllib.urlencode({'url':puny})))
