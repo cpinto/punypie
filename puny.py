@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # vim:tabstop=4:expandtab:sw=4:softtabstop=4
 
-"""punypie is a library for the URL shortener service created by SAPO
+"""puny.py is a library for the URL shortener service created by SAPO
 
 """
 
@@ -40,8 +40,8 @@ def shorten(url):
 
         Returns a PunyURL object with the shortened versions of the URL.
         Example usage:
-        >>> import punypie
-        >>> puny = punypie.shorten('http://developers.sapo.pt')
+        >>> import puny
+        >>> puny = puny.shorten('http://developers.sapo.pt')
         >>> print puny.puny
         http://漭.sl.pt
         >>> print puny.ascii
@@ -55,8 +55,8 @@ def expand(puny):
         
         Returns the original URL
         Example usage:
-        >>> import punypie
-        >>> print punypie.expand('http://b.ot.sl.pt')
+        >>> import puny
+        >>> print puny.expand('http://b.ot.sl.pt')
         http://developers.sapo.pt
     '''
     u = '?'.join((FROM_PUNY,urllib.urlencode({'url':puny})))
