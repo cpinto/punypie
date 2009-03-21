@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # vim:tabstop=4:expandtab:sw=4:softtabstop=4
 
-"""puny.py is a library for the URL shortener service created by SAPO
+""" puny.py is a library for the URL shortener service created by SAPO
 
+    The puny url service is available at http://puny.sapo.pt/ and
+    it's API at http://services.sapo.pt/Metadata/Service/PunyURL?culture=EN
 """
 
 import urllib,urllib2
